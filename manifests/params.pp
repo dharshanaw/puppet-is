@@ -287,6 +287,23 @@ class wso2is::params {
         key_password => 'wso2carbon'
       }
     }
+    $session_data_persist     = {
+      data_sd                 => {
+        enable       => 'true',
+        temporary    => 'false',
+        pool_size    => '100'
+      },
+      session_data_cleanUp    => {
+        enable           => 'true',
+        clean_up_timeout => '20160',
+        clean_up_period  => '1140'
+      },
+      operationDataCleanUp  => {
+        enable  => '720',
+        clean_up_period =>'720'
+      }
+    }
+
   }
 
   $product_name               = 'wso2is'
