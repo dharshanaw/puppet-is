@@ -136,7 +136,7 @@ class wso2is (
     enable_secure_vault    => $enable_secure_vault,
     secure_vault_configs   => $secure_vault_configs,
     key_stores             => $key_stores,
-    session_data_persist   =>$session_data_persist,
+    session_data_persist   => $session_data_persist,
     carbon_home            => $carbon_home,
     pack_file_abs_path     => $pack_file_abs_path
   }
