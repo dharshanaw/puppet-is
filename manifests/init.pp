@@ -99,6 +99,7 @@ class wso2is (
   validate_hash($dep_sync)
   validate_hash($ports)
   validate_hash($jvm)
+  validate_hash($session_data_persist)
   validate_string($fqdn)
   validate_hash($sso_authentication)
   validate_hash($user_management)
