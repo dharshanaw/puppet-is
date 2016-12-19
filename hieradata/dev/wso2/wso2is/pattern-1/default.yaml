@@ -101,6 +101,19 @@ wso2::clustering:
 wso2::is_datasource: wso2_carbon_db
 
 
+wso2::session_data_persist:
+      data_sd:
+        enable: true
+        temporary: false
+        pool_size : 100
+      session_data_cleanUp:
+        enable: true
+        clean_up_timeout: 20160
+        clean_up_period: 1140
+      operationDataCleanUp:
+        enable: 720
+        clean_up_period: 720
+
 # SSO Configuration
 wso2::sso_authentication:
   enabled: false
