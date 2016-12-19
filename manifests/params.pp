@@ -75,6 +75,7 @@ class wso2is::params {
     $jvm                      = hiera('wso2::jvm')
     $sso_authentication       = hiera('wso2::sso_authentication')
     $user_management          = hiera('wso2::user_management')
+    $session_data_persist     = hiera('wso2::session_data_persist')
     $enable_secure_vault      = hiera('wso2::enable_secure_vault')
 
     if $enable_secure_vault {
@@ -287,6 +288,7 @@ class wso2is::params {
         key_password => 'wso2carbon'
       }
     }
+
     $session_data_persist     = {
       data_sd                 => {
         enable       => 'true',
