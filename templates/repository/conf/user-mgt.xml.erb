@@ -25,7 +25,7 @@
             </AdminUser>
             <EveryOneRoleName>everyone</EveryOneRoleName> <!-- By default users in this role sees the registry root -->
             <Property name="isCascadeDeleteEnabled">true</Property>
-            <Property name="dataSource"><%= @master_datasources[@user_mgt_db]['jndi_config'] %></Property>
+            <Property name="dataSource"><%= @master_datasources['user_mgt_db']['jndi_config'] %></Property>
         </Configuration>
 
         <!-- Following is the configuration for internal JDBC user store. This user store manager is based on JDBC.

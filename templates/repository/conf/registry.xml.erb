@@ -28,7 +28,7 @@
     <registryRoot>/</registryRoot>
 
     <dbConfig name="wso2registry">
-        <dataSource><%= @master_datasources[@registry_db]['jndi_config'] %></dataSource>
+        <dataSource><%= @master_datasources['registry_db']['jndi_config'] %></dataSource>
     </dbConfig>
 
 <% if @registry_mounts and !@registry_mounts.empty? -%>
