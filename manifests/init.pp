@@ -62,6 +62,7 @@ class wso2is (
 
   # Templated configuration parameters
   $master_datasources     = $wso2is::params::master_datasources,
+  $master_datasources_is     = $wso2is::params::master_datasources_is,
   $registry_mounts        = $wso2is::params::registry_mounts,
   $hostname               = $wso2is::params::hostname,
   $mgt_hostname           = $wso2is::params::mgt_hostname,

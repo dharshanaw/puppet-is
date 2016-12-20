@@ -178,7 +178,7 @@ class wso2is::params {
       }
     }
 
-    $master_datasources       = {
+    $master_datasources_is       = {
       wso2_carbon_db => {
         name                => 'WSO2_CARBON_DB',
         description         => 'The datasource used for registry and user manager',
