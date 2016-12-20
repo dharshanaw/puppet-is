@@ -156,6 +156,7 @@ class wso2is::params {
     $template_list        = [
       'repository/conf/datasources/bps-datasources.xml',
       'repository/conf/datasources/metrics-datasources.xml',
+      'repository/conf/datasources/master-datasources.xml',
       'repository/conf/identity/identity.xml',
       'repository/conf/identity/sso-idp-config.xml',
       'repository/conf/identity/application-authentication.xml',
@@ -164,7 +165,6 @@ class wso2is::params {
       'repository/conf/carbon.xml',
       'repository/conf/user-mgt.xml',
       'repository/conf/registry.xml',
-      'repository/conf/datasources/master-datasources.xml',
       'repository/conf/tomcat/catalina-server.xml',
       'repository/conf/axis2/axis2.xml',
       'repository/conf/security/authenticators.xml',
