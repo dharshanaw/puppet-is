@@ -21,7 +21,7 @@
         <DataSource>
             <!-- Include a data source name (jndiConfigName) from the set of data
                 sources defined in master-datasources.xml -->
-            <Name><%= @master_datasources[@is_datasource]['jndi_config'] %>
+            <Name><%= @master_datasources[@identity_db]['jndi_config'] %>
             </Name>
         </DataSource>
         <!-- If the identity database is created from another place and if it is
@@ -29,25 +29,17 @@
             following property to "true". -->
         <!-- <SkipDBSchemaCreation>false</SkipDBSchemaCreation> -->
         <SessionDataPersist>
-            <Enable><%= @session_data_persist['data_sd']['enable']%>
-            </Enable>
-            <Temporary><%= @session_data_persist['data_sd']['temporary']%>
-            </Temporary>
-            <PoolSize><%= @session_data_persist['data_sd']['pool_size']%>
-            </PoolSize>
+            <Enable><%= @session_data_persist['data_sd']['enable']%></Enable>
+            <Temporary><%= @session_data_persist['data_sd']['temporary']%></Temporary>
+            <PoolSize><%= @session_data_persist['data_sd']['pool_size']%></PoolSize>
             <SessionDataCleanUp>
-                <Enable><%= @session_data_persist['session_data_cleanUp']['enable']%>
-                </Enable>
-                <CleanUpTimeout><%= @session_data_persist['session_data_cleanUp']['clean_up_timeout']%>
-                </CleanUpTimeout>
-                <CleanUpPeriod><%= @session_data_persist['session_data_cleanUp']['clean_up_period']%>
-                </CleanUpPeriod>
+                <Enable><%= @session_data_persist['session_data_cleanUp']['enable']%></Enable>
+                <CleanUpTimeout><%= @session_data_persist['session_data_cleanUp']['clean_up_timeout']%></CleanUpTimeout>
+                <CleanUpPeriod><%= @session_data_persist['session_data_cleanUp']['clean_up_period']%></CleanUpPeriod>
             </SessionDataCleanUp>
             <OperationDataCleanUp>
-                <Enable><%= @session_data_persist['operationDataCleanUp']['enable']%>
-                </Enable>
-                <CleanUpPeriod><%= @session_data_persist['operationDataCleanUp']['clean_up_period']%>
-                </CleanUpPeriod>
+                <Enable><%= @session_data_persist['operationDataCleanUp']['enable']%></Enable>
+                <CleanUpPeriod><%= @session_data_persist['operationDataCleanUp']['clean_up_period']%></CleanUpPeriod>
             </OperationDataCleanUp>
         </SessionDataPersist>
     </JDBCPersistenceManager>
@@ -416,15 +408,13 @@
 
     <EntitlementSettings>
         <ThirftBasedEntitlementConfig>
-            <EnableThriftService><%= @enable_thrift_service %>
-            </EnableThriftService>
+            <EnableThriftService><%= @enable_thrift_service %></EnableThriftService>
             <ReceivePort>${Ports.ThriftEntitlementReceivePort}</ReceivePort>
             <ClientTimeout>10000</ClientTimeout>
             <KeyStore>
                 <Location>${carbon.home}/<%= @key_stores['key_store']['location'] %>
                 </Location>
-                <Password><%= @key_stores['key_store']['password'] %>
-                </Password>
+                <Password><%= @key_stores['key_store']['password'] %></Password>
             </KeyStore>
             <!-- Enable this element to mention the host-name of your IS machine -->
             <ThriftHostName>${carbon.host}</ThriftHostName>

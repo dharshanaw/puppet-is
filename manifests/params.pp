@@ -193,6 +193,51 @@ class wso2is::params {
         default_auto_commit => false,
         validation_query    => 'SELECT 1',
         validation_interval => '30000'
+      },
+      identity_db    => {
+        name                => 'WSO2_IDENTITY_DB',
+        description         => 'The datasource used for registry and user manager',
+        driver_class_name   => 'org.h2.Driver',
+        url                 => 'jdbc:h2:repository/database/WSO2CARBON_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000',
+        username            => 'wso2carbon',
+        password            => 'wso2carbon',
+        jndi_config         => 'jdbc/WSO2IDentityDB',
+        max_active          => '50',
+        max_wait            => '60000',
+        test_on_borrow      => true,
+        default_auto_commit => false,
+        validation_query    => 'SELECT 1',
+        validation_interval => '30000'
+      },
+      user_mgt_db    => {
+        name                => 'WSO2_USER_MGT_DB',
+        description         => 'The datasource used for registry and user manager',
+        driver_class_name   => 'org.h2.Driver',
+        url                 => 'jdbc:h2:repository/database/WSO2CARBON_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000',
+        username            => 'wso2carbon',
+        password            => 'wso2carbon',
+        jndi_config         => 'jdbc/WSO2UserMgtDB',
+        max_active          => '50',
+        max_wait            => '60000',
+        test_on_borrow      => true,
+        default_auto_commit => false,
+        validation_query    => 'SELECT 1',
+        validation_interval => '30000'
+      },
+      registry_db    => {
+        name                => 'WSO2_REGISTRY_DB',
+        description         => 'The datasource used for registry and user manager',
+        driver_class_name   => 'org.h2.Driver',
+        url                 => 'jdbc:h2:repository/database/WSO2CARBON_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000',
+        username            => 'wso2carbon',
+        password            => 'wso2carbon',
+        jndi_config         => 'jdbc/WSO2RegistryDB',
+        max_active          => '50',
+        max_wait            => '60000',
+        test_on_borrow      => true,
+        default_auto_commit => false,
+        validation_query    => 'SELECT 1',
+        validation_interval => '30000'
       }
     }
 
@@ -300,8 +345,8 @@ class wso2is::params {
         clean_up_timeout => '20160',
         clean_up_period  => '1140'
       },
-      operationDataCleanUp  => {
-        enable  => '720',
+      operationDataCleanUp    => {
+        enable          => '720',
         clean_up_period =>'720'
       }
     }
